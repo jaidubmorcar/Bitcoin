@@ -13,6 +13,7 @@
 		8D0694B51FAAB284007EA62A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D0694B41FAAB284007EA62A /* Assets.xcassets */; };
 		8D0694B81FAAB284007EA62A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0694B61FAAB284007EA62A /* LaunchScreen.storyboard */; };
 		8D0694C01FAAB2FC007EA62A /* bitcoin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D0694BF1FAAB2FC007EA62A /* bitcoin.png */; };
+		8DE744E51FBD2E5E00A47D1A /* LogicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE744E41FBD2E5E00A47D1A /* LogicModel.swift */; };
 		C4F98908C9E923B370395ED6 /* Pods_CurrentcyBitcoinConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3CB0CA64852C6113A6F9A5 /* Pods_CurrentcyBitcoinConverter.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		8D0694B71FAAB284007EA62A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D0694B91FAAB284007EA62A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D0694BF1FAAB2FC007EA62A /* bitcoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitcoin.png; sourceTree = "<group>"; };
+		8DE744E41FBD2E5E00A47D1A /* LogicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicModel.swift; sourceTree = "<group>"; };
 		9F046B7FC5A0641DDB44E995 /* Pods-CurrentcyBitcoinConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrentcyBitcoinConverter.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurrentcyBitcoinConverter/Pods-CurrentcyBitcoinConverter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				8D0694BF1FAAB2FC007EA62A /* bitcoin.png */,
 				8D0694B61FAAB284007EA62A /* LaunchScreen.storyboard */,
 				8D0694B91FAAB284007EA62A /* Info.plist */,
+				8DE744E41FBD2E5E00A47D1A /* LogicModel.swift */,
 			);
 			path = CurrentcyBitcoinConverter;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D0694B01FAAB284007EA62A /* ViewController.swift in Sources */,
+				8DE744E51FBD2E5E00A47D1A /* LogicModel.swift in Sources */,
 				8D0694AE1FAAB284007EA62A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

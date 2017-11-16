@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-    
+    private  var model=LogicModel()
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var currentPickerView: UIPickerView!
     override func viewDidLoad() {
@@ -20,9 +20,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         currentPickerView.dataSource=self
         // Do any additional setup after loading the view, typically from a nib.
     }
-    let currencyArray=["AUD","BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SBD","MRO","MNT"]
- let symbolArray=["$","R$","$","¥","€","£","$","Rp","₪","INR","¥","$","kr","$","zł","lei","Br","$","","₮"]
-    
+
     let baseURL="https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
     var finalURL:String?
     
@@ -30,15 +28,14 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return currencyArray.count
+        return model.countArrayCurrency()
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return currencyArray[row]
+        return model.nameArrayCurrency(row:row)
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(currencyArray[row])
-        finalURL = baseURL+currencyArray[row];
-        getBitcoinData(url: finalURL!,symbol:symbolArray[row])
+        finalURL = baseURL+model.nameArrayCurrency(row:row);
+        getBitcoinData(url: finalURL!,symbol:model.nameArraySymbol(row:row))
     }
     //MARK: - Networking
     
@@ -54,20 +51,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func updateBitcoinData(json:JSON, symbol:String){
     
         if let bitcoinResult=json["ask"].double{
-            labelPrice.text=symbol+String(FormatNumber(number: bitcoinResult))
+            labelPrice.text=symbol+String(model.FormatNumber(number: bitcoinResult))
         }else{
             print("Servicio no disponible")
         }
     }
     
-    func FormatNumber(number:Double) -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        numberFormatter.groupingSeparator = "."
-        let returnValue = numberFormatter.string(from: NSNumber(value:number))
-        
-        return returnValue!
-    }
+    
     
   
     
