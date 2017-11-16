@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurrentcyBitcoinConverter/ViewController.swift"
-            timestampString = "531888399.263355"
+            timestampString = "532491575.746848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "getBitcoinData(url:)"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getBitcoinData(url:symbol:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

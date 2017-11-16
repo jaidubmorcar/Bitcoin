@@ -389,6 +389,7 @@
 				8D0694BE1FAAB284007EA62A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
